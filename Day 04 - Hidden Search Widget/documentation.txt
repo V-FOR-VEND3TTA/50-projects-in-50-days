@@ -1,0 +1,151 @@
+This is a documentation and explanation of the code line by line:
+
+1. `<!DOCTYPE html>`: This is the document type declaration, indicating that the document is an HTML5 document. It is required at the beginning of an HTML document to specify the version of HTML being used.
+
+2. `<html lang="en">`: This is the root element of the HTML document. It contains all the other elements of the webpage. The `lang` attribute is set to "en," indicating that the language of the document is English.
+
+3. `<head>`: This is the head section of the HTML document. It contains meta-information about the document, such as character encoding, links to external resources (CSS and JavaScript files), and the title of the webpage.
+
+4. `<meta charset="UTF-8">`: This meta tag specifies the character encoding of the document. "UTF-8" is a character encoding that supports a wide range of characters from various languages.
+
+5. `<meta http-equiv="X-UA-Compatible" content="IE=edge">`: This meta tag is used to specify the version of Internet Explorer (IE) to be used to render the webpage. "IE=edge" tells IE to use the latest available version.
+
+6. `<meta name="viewport" content="width=device-width, initial-scale=1.0">`: This meta tag provides instructions to the browser on how to control the page's dimensions and scaling on different devices. "width=device-width" means the page should match the device's width, and "initial-scale=1.0" sets the initial zoom level to 100%.
+
+7. `<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />`: This is a link to an external CSS stylesheet. The `href` attribute specifies the URL of the CSS file. It's using Font Awesome, a popular library for icons. The `integrity`, `crossorigin`, and `referrerpolicy` attributes provide security and control options for loading external resources.
+
+8. `<link rel="stylesheet" href="css/style.css">`: Another link to an external CSS stylesheet named "style.css" located in a local "css" folder. This CSS file is used to style the HTML elements of the webpage.
+
+9. `<title>Hidden Search Widget</title>`: This is the title of the webpage that appears in the browser's title bar or tab.
+
+10. `<body>`: This is the body section of the HTML document. It contains the visible content of the webpage.
+
+11. `<div class="search">`: This is a div element with a class attribute set to "search." It represents a container that wraps the search input and button elements.
+
+12. `<input type="text" class="input" placeholder="Search...">`: This is an input element of type "text" that allows users to input text. It has a class attribute set to "input," and a placeholder attribute set to "Search...," which displays a greyed-out hint inside the input field.
+
+13. `<button class="btn">`: This is a button element with a class attribute set to "btn." It represents a clickable button.
+
+14. `<i class="fas fa-search"></i>`: This is an icon (i) element with a class attribute set to "fas fa-search." The "fas" class is part of the Font Awesome library, and "fa-search" is the specific icon class representing a search icon. The icon is used as content within the button.
+
+15. `</button>`: This is the closing tag for the button element.
+
+16. `</div>`: This is the closing tag for the div element with the class "search."
+
+17. `<script src="js/script.js"></script>`: This is a script element that includes an external JavaScript file named "script.js" located in a local "js" folder. The JavaScript code within this file will be executed by the browser.
+
+18. `</body>`: This is the closing tag for the body section of the HTML document.
+
+19. `</html>`: This is the closing tag for the root html element. It marks the end of the HTML document.
+
+This HTML code represents a basic webpage that includes a hidden search widget with an input field and a search button, along with references to external CSS and JavaScript files for styling and functionality.
+
+Explaining the CSS:
+
+1. `@import url('https://fonts.googleapis.com/css?family=Roboto:wght@400;700&display=swap');`: This line imports the "Roboto" font from Google Fonts with two different font weights (400 and 700) and swaps the default font with this imported one. The "Roboto" font will be used for all text on the page.
+
+2. `* { box-sizing: border-box; }`: The universal selector `*` selects all elements on the page, and the `box-sizing` property is set to `border-box`. This makes sure that the element's total width and height include padding and borders, not just the content area.
+
+3. `body { ... }`: This block of styles applies to the `<body>` element in the HTML code.
+
+   - `background-image: linear-gradient(90deg, #aaa, #fff);`: It sets a linear gradient as the background image of the body, creating a smooth transition from light gray (#aaa) to white (#fff) from left to right.
+
+   - `color: #222;`: This sets the text color inside the body to a dark gray (#222).
+
+   - `display: flex;`: It makes the body a flex container, enabling flex layout for its child elements.
+
+   - `align-items: center;`: It centers the flex items (child elements) along the cross-axis (vertical axis) of the flex container (body).
+
+   - `justify-content: center;`: It centers the flex items along the main axis (horizontal axis) of the flex container.
+
+   - `height: 100vh;`: This sets the height of the body to 100% of the viewport height, ensuring the content takes up the entire screen.
+
+   - `font-family: 'Roboto', sans-serif;`: It sets the font family for the body text to "Roboto" with a fallback to the default sans-serif font.
+
+   - `overflow: hidden;`: This prevents any content overflowing the body from being visible, effectively hiding any content that extends beyond the viewport.
+
+   - `margin: 0;`: It removes any default margin on the body.
+
+4. `.search { ... }`: This block of styles applies to the element with the class "search" in the HTML code.
+
+   - `position: relative;`: It positions the "search" element relative to its normal position, allowing absolute positioning of its children.
+
+   - `height: 50px;`: Sets the height of the "search" element to 50 pixels.
+
+5. `.search .input { ... }`: This block of styles applies to the input element with the class "input" that is a child of the element with the class "search".
+
+   - `background-color: #fff;`: Sets the background color of the input field to white (#fff).
+
+   - `border: 0;`: Removes the border around the input field.
+
+   - `font-size: 18px;`: Sets the font size of the text inside the input field to 18 pixels.
+
+   - `padding: 15px;`: Adds 15 pixels of padding to the input field on all sides, creating space between the text and the input's boundaries.
+
+   - `height: 50px;`: Sets the height of the input field to 50 pixels, matching the height of the parent element.
+
+   - `width: 50px;`: Sets the initial width of the input field to 50 pixels, making it a square.
+
+   - `transition: width 0.4s ease;`: This applies a smooth transition effect of 0.4 seconds with an ease timing function when the width of the input field changes.
+
+6. `.btn { ... }`: This block of styles applies to the element with the class "btn" in the HTML code.
+
+   - `background-color: #fff;`: Sets the background color of the button to white (#fff).
+
+   - `border: 0;`: Removes the border around the button.
+
+   - `cursor: pointer;`: Changes the mouse cursor to a pointer (hand) when hovering over the button, indicating it is clickable.
+
+   - `font-size: 24px;`: Sets the font size of the icon inside the button to 24 pixels.
+
+   - `position: absolute; top: 0; left: 0;`: Positions the button at the top-left corner of the "search" element, overlaying it on top of the input field.
+
+   - `height: 50px; width: 50px;`: Sets the height and width of the button to 50 pixels, making it a square.
+
+   - `transition: transform 0.4s ease;`: This applies a smooth transition effect of 0.4 seconds with an ease timing function when the button's position changes due to the transform.
+
+7. `.btn:focus, .input:focus { outline: none; }`: This rule removes the default focus outline that appears around the button and input elements when they are active.
+
+8. `.search.active .input { ... }`: This block of styles applies to the input element with the class "input" when it is a descendant of an element with the class "search" and has an additional class "active." This style is used to modify the input field when it's in an "active" state (expanded).
+
+   - `width: 200px;`: Sets the width of the input field to 200 pixels, expanding it when the "active" class is applied to the "search" element.
+
+9. `.search.active .btn { ... }`: This block of styles applies to the element with the class "btn" when it is a descendant of an element with the class "search" and has an additional class "active." This style is used to modify the button when it's in an "active" state (expanded).
+
+   - `transform: translateX(198px);`: This moves (transforms) the button 198 pixels to the right (along the x-axis) when the "active" class is applied to the "search" element. This makes the button slide along with the expanding input field.
+
+In summary, the CSS code provided adds styles to create a hidden search widget. The HTML code provided earlier contains the necessary elements with appropriate classes for the CSS to style. The CSS defines the appearance and behavior of the search input field, search button, and the overall layout of the page. When the search widget is activated (by adding the "active" class to the "search" element), the input field expands, and the search button moves to the right to create a search bar-like effect. The CSS also ensures that the layout is responsive and adjusts to different viewport sizes.
+
+
+Explaining the JS:
+
+```javascript
+const search = document.querySelector('.search')
+const btn = document.querySelector('.btn')
+const input = document.querySelector('.input')
+```
+
+These three lines declare and initialize three variables `search`, `btn`, and `input` using the `document.querySelector()` method. They select the respective elements with the specified classes ('.search', '.btn', and '.input') from the HTML document and store them in these variables.
+
+The `search` variable will refer to the element with the class "search," which is the container wrapping the search input and button elements.
+
+The `btn` variable will refer to the element with the class "btn," which is the search button.
+
+The `input` variable will refer to the element with the class "input," which is the search input field.
+
+```javascript
+btn.addEventListener('click', () => {
+    search.classList.toggle('active')
+    input.focus()
+})
+```
+
+These lines add an event listener to the search button (referred to by the `btn` variable). The event listener listens for a "click" event on the button, and when the button is clicked, the provided callback function will be executed.
+
+Inside the callback function:
+
+1. `search.classList.toggle('active')`: This line toggles the "active" class on the "search" element (the container div). When the button is clicked, this line will add the "active" class to the "search" element if it doesn't have it already, or remove the "active" class if it's already present. This, in turn, triggers the CSS styles with the `.search.active .input` and `.search.active .btn` selectors, causing the search input to expand and the search button to move to the right, creating the search bar effect.
+
+2. `input.focus()`: This line sets the focus on the search input field (referred to by the `input` variable) when the button is clicked. This is useful because it allows the user to start typing in the search input field immediately after clicking the search button, providing a better user experience.
+
+In summary, the provided JavaScript code adds functionality to the search button that triggers the expansion of the search input field and moves the search button to the right (creating a search bar effect) when the button is clicked. It achieves this by adding and removing the "active" class to the "search" element, which is then utilized by the CSS styles with the `.search.active .input` and `.search.active .btn` selectors. Additionally, the code ensures that the search input field is focused automatically when the button is clicked, making it ready for user input. The JavaScript interacts with the CSS and HTML to create an interactive and visually appealing search widget on the webpage.
